@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Node JS</title>
+    <style>
+      body {
+        color: white;
+        background-color: rgb(27, 27, 27);
+        text-align: center;
+        padding: 100px auto;
+      }
+
+      nav a:nth-of-type(3) {
+        color: yellow;
+        text-shadow: 0 0 5px rgba(211, 209, 162, 0.971);
+        text-decoration: underline;
+        border-radius: 10px;
+        pointer-events: none;
+      }
+
+      li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%- include("blocks/header") -%> <% if (username) {%>
+    <main>
+      <h1>The page users: <%= username.toUpperCase() %></h1>
+      <%} else {%>
+      <h1>User not selected</h1>
+      <%}%> <% if (username=="alex" ) {%>
+      <h2>Hobbies</h2>
+      <ul>
+        <% hobbies.forEach(function(hobby) { %>
+        <li><%= hobby %></li>
+        <% }); %>
+      </ul>
+      <%}%>
+      <p>
+        Add any name in the Latin alphabet to the current URL in the browser
+        search bar. Of course, the name must be preceded by a backslash /
+      </p>
+      <p>Replace the name that you added in the URL with the name alex</p>
+    </main>
+  </body>
+</html>

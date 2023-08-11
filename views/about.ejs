@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>About us</title>
+    <style>
+      nav a:nth-of-type(2) {
+        color: yellow;
+        text-shadow: 0 0 5px rgba(211, 209, 162, 0.971);
+        border-radius: 10px;
+        pointer-events: none;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%- include("blocks/header") -%>
+    <main>
+      <h1>About this project</h1>
+      <p>
+        This project is an introduction to Node JS, the Express library and the
+        EJS templating engine
+      </p>
+    </main>
+  </body>
+</html>
